@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link herf="jquiry_ui/jquiry-ui.css" rel="stylesheet">
+</head>
+    <style>
+        #draggable{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+        }
+        #draggable2{
+            width: 600px;
+            height: 600px;
+            background-color: gainsboro;
+        }
+    </style>
+
+    <body>
+
+    <div id="draggable" class="ui-widget-content" style="background-color: yellow">
+        <p>ドラッグしてください<p>
+    </div>
+    <div id="content">
+        <div id="draggable2">
+            <p>ここにどラップしてください。</p>
+        </div>
+    </div>
+
+    <script src="./jquiry.js"></script>
+    <script src="./jquiry_ui/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        $("#draggable").draggable();
+
+        $("#draggable2").droppable({
+            drop:function(event, ui){
+                $(this).addClass("ui-state-highlight")
+                    .find("p").html("dropされました");
+            }
+
+        });
+    </script>
+
+
+
+
+    </body>
+</html>

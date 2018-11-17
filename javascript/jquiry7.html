@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link herf="jquiry_ui/jquiry-ui.css" rel="stylesheet">
+</head>
+<style>
+    #draggable{
+        width: 200px;
+        height: 200px;
+        background-color: bisque;
+    }
+    #draggable2{
+        width: 600px;
+        height: 600px;
+        background-color: gainsboro;
+    }
+</style>
+
+<body>
+<div id="tag">
+    <h3>SECTION1</h3>
+    <div><p>ここにはセクションの内容が入ります。</p></div>
+    <h3>SECTION2</h3>
+    <div><p>ここにはセクションの内容が入ります。</p></div>
+    <h3>SECTION3</h3>
+    <div><p>ここにはセクションの内容が入ります。</p></div>
+    <h3>SECTION4</h3>
+    <div><p>ここにはセクションの内容が入ります。</p></div>
+    <h3>SECTION5</h3>
+    <div><p>ここにはセクションの内容が入ります。</p></div>
+</div>
+
+<script src="./jquiry.js"></script>
+<script src="./jquiry_ui/jquery-ui.js"></script>
+
+<script type="text/javascript">
+    $("#tag").sortable();
+    $("#tag").disableSelection();
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+</style>
+
+<p>
+
+<script src="./jquiry.js"></script>
+
+    <script type="text/javascript">
+    /*$.get("info.txt",function(data){
+        alert(data);
+    });*/
+    $.ajax("info.txt").done(function(data){
+        $("p").html(data);
+    }).fail(function(){
+        $("p").html("dataをしゅとくできませんでした。");
+    });
+
+
+
+
+    </script>
+
+</body>
+</html>
